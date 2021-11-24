@@ -138,10 +138,10 @@ public class SearchAndReservStepDef {
         HomePage homePage=new HomePage();
 
         String expectedPhoneNumber= "5428366650";
-        String expectedEmail="Emre.can.kuleli.1998@gmail.com";
-        String expectedName="Emre";
-        String expectedLastname="Kazar";
-        String expectedPublicId="18325910324";
+        String expectedEmail="tayoya2883@ineedsa.com";
+        String expectedName="Hakan";
+        String expectedLastname="Aydın";
+        String expectedPublicId="15656233764";
         String expectedGender="Male";
         String expectedDepatureDay="14 Ara 2021, Salı";
         String expectedReturnDay="10 Oca 2022, Pazartesi";

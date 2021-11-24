@@ -12,13 +12,13 @@ Feature: Search and reserve functionalities
     And user click Ucuz bilet bul button
     And user chooses one of departure flight and click Seç button
     And user chooses one of return flight and click Seç button
-    And user enter "Emre.can.kuleli.1998@gmail.com" in E-posta adresiniz text box
+    And user enter "tayoya2883@ineedsa.com" in E-posta adresiniz text box
     And user enter "428366650" in Cep Telefonunuz text box
-    And user enter his/her name "Emre" name text box
-    And user enter his/her surname "Kazar" in surname text box
+    And user enter his/her name "Hakan" name text box
+    And user enter his/her surname "Aydın" in surname text box
     And user enter his/her birth day date
-    And user enter "18325910324" in TC Kimlik No text box
+    And user enter "15656233764" in TC Kimlik No text box
     And user chooses male gender
-    And user enter "N3L2716513" in HES Kodu text box
+    And user enter "K2G5345613" in HES Kodu text box
     And user click odemeye ilerle button
     Then user should be able to made reservation to a flight
