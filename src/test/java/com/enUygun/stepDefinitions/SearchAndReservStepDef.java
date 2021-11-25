@@ -22,7 +22,7 @@ public class SearchAndReservStepDef {
 
     @When("user enter {string} in Nereden text box and choose to airport")
     public void user_enter_in_Nereden_text_box_and_choose_to_airport(String nereden) {
-        HomePage homePage=new HomePage();
+        HomePage homePage = new HomePage();
         homePage.neredenTextBox.sendKeys(nereden);
         homePage.istAirports.click();
 
@@ -30,7 +30,7 @@ public class SearchAndReservStepDef {
 
     @When("user enter {string} in Nereye text box and chooses to airport")
     public void user_enter_in_Nereye_text_box_and_chooses_to_airport(String nereye) {
-        HomePage homePage=new HomePage();
+        HomePage homePage = new HomePage();
         homePage.nereyeTextBox.sendKeys(nereye);
         homePage.esbAirport.click();
 
@@ -38,7 +38,7 @@ public class SearchAndReservStepDef {
 
     @When("user chooses departure date")
     public void user_chooses_departure_date() {
-        HomePage homePage=new HomePage();
+        HomePage homePage = new HomePage();
         homePage.departureDayPicker.click();
         homePage.nextMonthArrow.click();
         homePage.departureDay.click();
@@ -47,13 +47,13 @@ public class SearchAndReservStepDef {
 
     @When("user click oneway check box")
     public void user_click_oneway_check_box() {
-        HomePage homePage=new HomePage();
+        HomePage homePage = new HomePage();
         homePage.onlyWayCheckBox.click();
     }
 
     @When("user chooses return date")
     public void user_chooses_return_date() {
-        HomePage homePage=new HomePage();
+        HomePage homePage = new HomePage();
         homePage.returnDay.click();
     }
 
@@ -64,7 +64,7 @@ public class SearchAndReservStepDef {
 
     @When("user chooses one of departure flight and click Seç button")
     public void user_chooses_one_of_departure_flight_and_click_Seç_button() {
-       new HomePage().departureFlight.click();
+        new HomePage().departureFlight.click();
     }
 
     @When("user chooses one of return flight and click Seç button")
@@ -80,7 +80,7 @@ public class SearchAndReservStepDef {
 
     @When("user enter {string} in Cep Telefonunuz text box")
     public void user_enter_in_Cep_Telefonunuz_text_box(String phoneNumber) {
-       new HomePage().phoneNumberTextBox.sendKeys(phoneNumber);
+        new HomePage().phoneNumberTextBox.sendKeys(phoneNumber);
     }
 
     @When("user enter his\\/her name {string} name text box")
@@ -95,7 +95,7 @@ public class SearchAndReservStepDef {
 
     @When("user enter his\\/her birth day date")
     public void user_enter_his_her_birth_day_date() {
-        HomePage homePage=new HomePage();
+        HomePage homePage = new HomePage();
         homePage.birthDateDayDropDown.click();
         homePage.birthDateDay.click();
         homePage.birthDateMonthDropDown.click();
@@ -112,39 +112,39 @@ public class SearchAndReservStepDef {
 
     @When("user chooses male gender")
     public void user_chooses_male_gender() throws ElementClickInterceptedException {
-        HomePage homePage=new HomePage();
+        HomePage homePage = new HomePage();
 
 
         homePage.genderMaleCheckBox.click();
     }
 
     @When("user enter {string} in HES Kodu text box")
-    public void user_enter_in_HES_Kodu_text_box(String healthCode) throws InterruptedException {
-        HomePage homePage=new HomePage();
+    public void user_enter_in_HES_Kodu_text_box(String healthCode) {
+        HomePage homePage = new HomePage();
         homePage.healthCodeTextBox.click();
-       homePage.healthCodeTextBox.sendKeys(healthCode);
-        Thread.sleep(5000);
+        homePage.healthCodeTextBox.sendKeys(healthCode);
+
     }
 
     @When("user click odemeye ilerle button")
     public void user_click_odemeye_ilerle_button() {
+
         new HomePage().odemeyeIlerleButton.click();
     }
 
 
-
     @Then("user should be able to made reservation to a flight")
     public void user_should_be_able_to_made_reservation_to_a_flight() {
-        HomePage homePage=new HomePage();
+        HomePage homePage = new HomePage();
 
-        String expectedPhoneNumber= "428366650";
-        String expectedEmail="tayoya2883@ineedsa.com";
-        String expectedName="Hakan";
-        String expectedLastname="Aydın";
-        String expectedPublicId="15656233764";
-        String expectedGender="Male";
-        String expectedDepatureDay="14 Ara 2021, Salı";
-        String expectedReturnDay="10 Oca 2022, Pazartesi";
+        String expectedPhoneNumber = "428366650";
+        String expectedEmail = "tayoya2883@ineedsa.com";
+        String expectedName = "Hakan";
+        String expectedLastname = "Aydın";
+        String expectedPublicId = "15656233764";
+        String expectedGender = "Male";
+        String expectedDepatureDay = "14 Ara 2021, Salı";
+        String expectedReturnDay = "10 Oca 2022, Pazartesi";
 
         Assert.assertTrue(expectedPhoneNumber.contains(homePage.actualPhoneNumber.getText()));
         Assert.assertTrue(expectedEmail.toLowerCase(Locale.ROOT).contains(homePage.actualEmail.getText().toLowerCase(Locale.ROOT)));
@@ -154,7 +154,6 @@ public class SearchAndReservStepDef {
         Assert.assertTrue((expectedGender.toLowerCase(Locale.ROOT).contains(homePage.actualGender.getText().toLowerCase(Locale.ROOT))));
         Assert.assertTrue((expectedDepatureDay.contains(homePage.actualDepatureDay.getText())));
         Assert.assertTrue(expectedReturnDay.contains(homePage.actualReturnDay.getText()));
-
 
 
     }
