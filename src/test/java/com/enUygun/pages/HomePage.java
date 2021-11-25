@@ -80,27 +80,27 @@ public class HomePage {
     @FindBy(xpath = "//div[@data-class='proceedCheckout']/button")
     public WebElement odemeyeIlerleButton;
 
-    @FindBy(xpath = "//input[contains(@value,'6650')]")
+    @FindBy(xpath = "//input[@id='contact_cellphone']")
     public WebElement actualPhoneNumber;
 
-    @FindBy(xpath = "//input[contains(@value,'emre.can.k')]")
+    @FindBy(xpath = "//input[@name='contactEmail']")
     public WebElement actualEmail;
 
-    @FindBy(xpath = "//input[contains(@value,'Emre')]")
+    @FindBy(xpath = "//input[@id='firstName_1']")
     public WebElement actualName;
 
-    @FindBy(xpath = "//input[contains(@value,'Kazar')]")
+    @FindBy(xpath = "//input[@id='lastName_1']")
     public WebElement actualLastName;
 
-    @FindBy(xpath = "//input[contains(@value,'1832')]")
+    @FindBy(xpath = "//input[@id='publicId_1']")
     public WebElement actualPublicId;
 
     @FindBy(xpath = "//input[@id='gender_M_1'][@checked='checked']")
     public WebElement actualGender;
 
-    @FindBy(xpath = "//div/span[text()='14 Ara 2021, Salı']")
+    @FindBy(xpath = "//div[@class='departure mb-2']/div[2]/span[2]")
     public WebElement actualDepatureDay;
-    @FindBy(xpath = "//div/span[text()='10 Oca 2022, Pazartesi']")
+    @FindBy(xpath = "//div[@id='flightItemreturn']/div[1]/div[2]/div[1]/div[2]/span[2]")
     public WebElement actualReturnDay;
 
 

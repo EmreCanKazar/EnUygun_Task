@@ -137,7 +137,7 @@ public class SearchAndReservStepDef {
     public void user_should_be_able_to_made_reservation_to_a_flight() {
         HomePage homePage=new HomePage();
 
-        String expectedPhoneNumber= "5428366650";
+        String expectedPhoneNumber= "428366650";
         String expectedEmail="tayoya2883@ineedsa.com";
         String expectedName="Hakan";
         String expectedLastname="Aydın";
